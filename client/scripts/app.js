@@ -88,7 +88,11 @@ var app = {
     app.filters.room = room;
     app.currentRoom = room;
     app.refresh();
-    $('.go-back').toggle();
+    if(room === undefined){
+      $('.go-back').toggle(false);
+    } else{
+      $('.go-back').toggle(true);
+    }
   },
   addFriend: function(){
     // Nothing
